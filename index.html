@@ -37,7 +37,7 @@
         .container-horizontal-boundary {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 20px;
         }
 
         .hero-horizontal-presentation-complex {
@@ -47,46 +47,59 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+            padding: 40px 0;
         }
 
         .hero-content-grid-system {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            grid-template-columns: 1fr;
+            gap: 40px;
             align-items: center;
             position: relative;
             z-index: 3;
             width: 100%;
+            text-align: center;
         }
 
         .hero-textual-content-sector {
             color: var(--pure-white-background);
+            order: 1;
+        }
+
+        .hero-visual-presentation-sector {
+            position: relative;
+            order: 2;
         }
 
         .primary-headline-declaration {
-            font-size: 48px;
+            font-size: clamp(24px, 4vw, 48px);
             font-weight: 900;
-            margin-bottom: 30px;
-            line-height: 1.1;
+            margin-bottom: 20px;
+            line-height: 1.2;
             color: var(--pure-white-background);
+            word-wrap: break-word;
         }
 
         .descriptive-content-narrative {
-            font-size: 20px;
-            margin-bottom: 40px;
-            line-height: 1.7;
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 30px;
+            line-height: 1.6;
             font-weight: 400;
             color: var(--pure-white-background);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .countdown-interactive-module {
             background: var(--pure-white-background);
             border: 3px solid var(--bright-yellow-accent);
-            padding: 25px;
+            padding: 20px;
             border-radius: 20px;
-            margin: 30px 0;
+            margin: 30px auto;
             text-align: center;
             animation: countdown-pulse-rhythm 2.5s infinite;
+            max-width: 400px;
         }
 
         @keyframes countdown-pulse-rhythm {
@@ -101,7 +114,7 @@
         }
 
         .countdown-label-text {
-            font-size: 18px;
+            font-size: clamp(14px, 2vw, 18px);
             font-weight: 700;
             margin-bottom: 15px;
             color: var(--deep-blue-primary);
@@ -111,25 +124,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             margin: 20px 0;
+            flex-wrap: wrap;
         }
 
         .time-digit {
             background: var(--deep-blue-primary);
             color: var(--pure-white-background);
-            width: 60px;
-            height: 60px;
+            width: clamp(45px, 8vw, 60px);
+            height: clamp(45px, 8vw, 60px);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: clamp(18px, 4vw, 28px);
             font-weight: 900;
         }
 
         .time-separator {
-            font-size: 24px;
+            font-size: clamp(18px, 3vw, 24px);
             font-weight: 900;
             color: var(--dark-yellow-emphasis);
         }
@@ -137,29 +151,28 @@
         .time-labels {
             display: flex;
             justify-content: center;
-            gap: 35px;
+            gap: clamp(20px, 5vw, 35px);
             margin-top: 10px;
+            flex-wrap: wrap;
         }
 
         .time-label {
-            font-size: 12px;
+            font-size: clamp(10px, 1.5vw, 12px);
             color: var(--medium-text-secondary);
             font-weight: 600;
             text-transform: uppercase;
         }
 
-        .hero-visual-presentation-sector {
-            position: relative;
-        }
-
         .workshop-primary-visual-asset {
             width: 100%;
-            max-width: 500px;
+            max-width: 400px;
             height: auto;
-            border-radius: 25px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             border: 4px solid var(--bright-yellow-accent);
             transition: transform 0.3s ease;
+            margin: 0 auto;
+            display: block;
         }
 
         .workshop-primary-visual-asset:hover {
@@ -170,9 +183,9 @@
             background: var(--bright-yellow-accent);
             color: var(--dark-text-primary);
             border: none;
-            padding: 22px 60px;
+            padding: clamp(16px, 3vw, 22px) clamp(30px, 6vw, 60px);
             border-radius: 50px;
-            font-size: 18px;
+            font-size: clamp(14px, 2.5vw, 18px);
             font-weight: 800;
             cursor: pointer;
             transition: all 0.4s ease;
@@ -183,6 +196,9 @@
             letter-spacing: 1px;
             position: relative;
             overflow: hidden;
+            margin: 20px auto;
+            display: block;
+            min-width: 250px;
         }
 
         .action-catalyst-button-primary::before {
@@ -220,9 +236,9 @@
 
         .content-horizontal-section-wrapper {
             background: var(--pure-white-background);
-            margin: 60px 0;
-            padding: 60px;
-            border-radius: 30px;
+            margin: 40px 0;
+            padding: clamp(30px, 5vw, 60px) clamp(20px, 4vw, 60px);
+            border-radius: 25px;
             box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
             border: 3px solid var(--light-border-line);
             position: relative;
@@ -240,12 +256,13 @@
         }
 
         .section-heading-horizontal-primary {
-            font-size: 32px;
+            font-size: clamp(24px, 4vw, 32px);
             font-weight: 800;
             color: var(--deep-blue-primary);
             margin-bottom: 30px;
             text-align: center;
             position: relative;
+            word-wrap: break-word;
         }
 
         .section-heading-horizontal-primary::after {
@@ -254,16 +271,16 @@
             bottom: -12px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 5px;
+            width: 80px;
+            height: 4px;
             background: var(--light-blue-secondary);
             border-radius: 3px;
         }
 
         .benefits-horizontal-grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: 1fr;
+            gap: 30px;
             margin: 40px 0;
         }
 
@@ -271,7 +288,7 @@
             background: var(--light-blue-background);
             border: 2px solid var(--light-blue-secondary);
             border-radius: 20px;
-            padding: 30px;
+            padding: 25px;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -282,16 +299,16 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 150px;
+            width: 100px;
             height: 100%;
             background: var(--blue-border-accent);
-            transform: translateX(150px);
+            transform: translateX(100px);
             transition: transform 0.6s ease;
         }
 
         .benefit-card-horizontal-specification:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
             border-color: var(--bright-yellow-accent);
         }
 
@@ -300,30 +317,31 @@
         }
 
         .benefit-title-horizontal-emphasis {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 20px);
             color: var(--deep-blue-primary);
             font-weight: 700;
             margin-bottom: 15px;
+            word-wrap: break-word;
         }
 
         .benefit-description-horizontal-detail {
-            font-size: 16px;
+            font-size: clamp(14px, 2vw, 16px);
             color: var(--dark-text-primary);
             line-height: 1.7;
         }
 
         .participants-horizontal-showcase-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin: 50px 0;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 40px 0;
         }
 
         .participant-card-horizontal-presentation {
             background: var(--pure-white-background);
             border: 3px solid var(--bright-yellow-accent);
             border-radius: 25px;
-            padding: 35px;
+            padding: 30px;
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
@@ -349,8 +367,8 @@
         }
 
         .participant-profile-image-horizontal {
-            width: 90px;
-            height: 90px;
+            width: clamp(70px, 12vw, 90px);
+            height: clamp(70px, 12vw, 90px);
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--light-blue-secondary);
@@ -361,16 +379,17 @@
         }
 
         .participant-name-horizontal-designation {
-            font-size: 18px;
+            font-size: clamp(16px, 2.5vw, 18px);
             font-weight: 700;
             color: var(--deep-blue-primary);
             margin-bottom: 8px;
             position: relative;
             z-index: 2;
+            word-wrap: break-word;
         }
 
         .participant-role-horizontal-description {
-            font-size: 15px;
+            font-size: clamp(13px, 2vw, 15px);
             color: var(--medium-text-secondary);
             margin-bottom: 20px;
             position: relative;
@@ -378,7 +397,7 @@
         }
 
         .testimonial-content-horizontal-narrative {
-            font-size: 15px;
+            font-size: clamp(13px, 2vw, 15px);
             line-height: 1.6;
             color: var(--dark-text-primary);
             position: relative;
@@ -387,89 +406,98 @@
 
         .testimonials-horizontal-layout-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
+            grid-template-columns: 1fr;
+            gap: 25px;
             margin: 40px 0;
         }
 
         .testimonial-quote-horizontal-container {
             background: var(--pure-white-background);
             border-left: 6px solid var(--bright-yellow-accent);
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             font-style: italic;
             position: relative;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 15px;
+            flex-direction: column;
+            text-align: center;
         }
 
         .testimonial-quote-horizontal-container::before {
             content: '"';
-            font-size: 70px;
+            font-size: clamp(40px, 8vw, 70px);
             color: var(--bright-yellow-accent);
             position: absolute;
-            top: -15px;
-            left: 20px;
+            top: -10px;
+            left: 15px;
             opacity: 0.3;
         }
 
         .testimonial-user-image {
-            width: 60px;
-            height: 60px;
+            width: clamp(50px, 8vw, 60px);
+            height: clamp(50px, 8vw, 60px);
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--bright-yellow-accent);
             flex-shrink: 0;
+            margin: 0 auto;
         }
 
         .testimonial-content-wrapper {
             flex: 1;
+            font-size: clamp(14px, 2vw, 16px);
+            line-height: 1.6;
         }
 
         .quote-attribution-horizontal-signature {
             font-weight: 600;
             color: var(--deep-blue-primary);
-            margin-top: 20px;
+            margin-top: 15px;
             font-style: normal;
+            font-size: clamp(12px, 2vw, 14px);
         }
 
         .expert-profile-horizontal-presentation {
             background: var(--deep-blue-primary);
             color: var(--pure-white-background);
-            padding: 60px;
-            border-radius: 30px;
-            margin: 60px 0;
+            padding: clamp(30px, 5vw, 60px);
+            border-radius: 25px;
+            margin: 50px 0;
             display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 50px;
+            grid-template-columns: 1fr;
+            gap: 30px;
             align-items: center;
+            text-align: center;
         }
 
         .expert-profile-image-horizontal {
-            width: 200px;
-            height: 200px;
+            width: clamp(150px, 25vw, 200px);
+            height: clamp(150px, 25vw, 200px);
             border-radius: 50%;
             object-fit: cover;
             border: 6px solid var(--bright-yellow-accent);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
         }
 
         .expert-content-horizontal-section {
-            text-align: left;
+            text-align: center;
         }
 
         .expert-name-horizontal-title {
-            font-size: 36px;
+            font-size: clamp(28px, 5vw, 36px);
             font-weight: 800;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: var(--bright-yellow-accent);
+            word-wrap: break-word;
         }
 
         .expert-biography-horizontal-content {
-            font-size: 17px;
-            line-height: 1.8;
+            font-size: clamp(15px, 2.5vw, 17px);
+            line-height: 1.7;
             color: var(--pure-white-background);
         }
 
@@ -477,8 +505,8 @@
             background: var(--pure-white-background);
             border: 4px solid var(--bright-yellow-accent);
             border-radius: 25px;
-            padding: 50px;
-            margin: 60px 0;
+            padding: clamp(30px, 5vw, 50px);
+            margin: 50px 0;
             position: relative;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
@@ -501,20 +529,23 @@
         }
 
         .risk-warning-horizontal-header {
-            font-size: 24px;
+            font-size: clamp(20px, 3vw, 24px);
             font-weight: 800;
             color: var(--bright-yellow-accent);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             position: relative;
             z-index: 2;
+            word-wrap: break-word;
+            justify-content: center;
+            text-align: center;
         }
 
         .risk-warning-horizontal-header::before {
             content: '⚠️';
-            margin-right: 12px;
-            font-size: 28px;
+            margin-right: 10px;
+            font-size: clamp(20px, 4vw, 28px);
             animation: warning-flash-motion 2s infinite;
         }
 
@@ -524,10 +555,10 @@
         }
 
         .risk-statement-horizontal-text {
-            font-size: 16px;
+            font-size: clamp(14px, 2vw, 16px);
             color: var(--dark-text-primary);
-            line-height: 1.8;
-            margin-bottom: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
             position: relative;
             z-index: 2;
         }
@@ -535,23 +566,24 @@
         .legal-footer-horizontal-framework {
             background: var(--deep-blue-primary);
             color: var(--pure-white-background);
-            padding: 50px 0;
+            padding: 40px 0;
             text-align: center;
         }
 
         .legal-section-horizontal-header {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 20px);
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .legal-link-horizontal-element {
             color: var(--bright-yellow-accent);
             text-decoration: none;
-            margin: 0 25px;
-            font-size: 16px;
+            margin: 0 15px;
+            font-size: clamp(14px, 2vw, 16px);
             transition: all 0.3s ease;
             position: relative;
+            display: inline-block;
         }
 
         .legal-link-horizontal-element::after {
@@ -575,23 +607,24 @@
 
         .floating-cta-horizontal-mechanism {
             position: fixed;
-            bottom: 30px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--bright-yellow-accent);
             color: var(--dark-text-primary);
             border: none;
-            padding: 25px 50px;
+            padding: clamp(18px, 3vw, 25px) clamp(25px, 5vw, 50px);
             border-radius: 50px;
-            font-size: 17px;
+            font-size: clamp(14px, 2.5vw, 17px);
             font-weight: 800;
             cursor: pointer;
             z-index: 99999;
-            box-shadow: 0 20px 50px rgba(251, 191, 36, 0.6);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.6);
             animation: floating-breath-horizontal-motion 3.5s ease-in-out infinite;
             white-space: nowrap;
             overflow: hidden;
             max-width: 90vw;
+            text-align: center;
         }
 
         .floating-cta-horizontal-mechanism::before {
@@ -613,109 +646,120 @@
         @keyframes floating-breath-horizontal-motion {
             0%, 100% {
                 transform: translateX(-50%) scale(1);
-                box-shadow: 0 20px 50px rgba(251, 191, 36, 0.6);
+                box-shadow: 0 15px 40px rgba(251, 191, 36, 0.6);
             }
             50% {
-                transform: translateX(-50%) scale(1.08);
-                box-shadow: 0 28px 65px rgba(251, 191, 36, 0.8);
+                transform: translateX(-50%) scale(1.05);
+                box-shadow: 0 20px 50px rgba(251, 191, 36, 0.8);
             }
         }
 
         .floating-cta-horizontal-mechanism:hover {
             animation-play-state: paused;
-            transform: translateX(-50%) translateY(-8px) scale(1.12);
-            box-shadow: 0 35px 75px rgba(251, 191, 36, 0.8);
+            transform: translateX(-50%) translateY(-5px) scale(1.08);
+            box-shadow: 0 25px 60px rgba(251, 191, 36, 0.8);
             background: var(--dark-yellow-emphasis);
         }
 
-        @media (max-width: 1024px) {
-            .hero-content-grid-system {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                text-align: center;
-            }
-
-            .expert-profile-horizontal-presentation {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                text-align: center;
-            }
-
-            .benefits-horizontal-grid-layout,
-            .participants-horizontal-showcase-grid,
-            .testimonials-horizontal-layout-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
+        /* Desktop Styles */
+        @media (min-width: 768px) {
             .container-horizontal-boundary {
-                padding: 0 25px;
+                padding: 0 40px;
             }
 
-            .hero-horizontal-presentation-complex {
-                padding: 60px 0;
+            .hero-content-grid-system {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                text-align: left;
             }
 
-            .primary-headline-declaration {
-                font-size: 36px;
+            .hero-textual-content-sector {
+                order: 1;
             }
 
-            .content-horizontal-section-wrapper {
-                margin: 40px 0;
-                padding: 40px 30px;
+            .hero-visual-presentation-sector {
+                order: 2;
             }
 
-            .section-heading-horizontal-primary {
-                font-size: 28px;
+            .benefits-horizontal-grid-layout {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 40px;
             }
 
-            .action-catalyst-button-primary {
-                padding: 18px 40px;
-                font-size: 16px;
+            .participants-horizontal-showcase-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 35px;
             }
 
-            .floating-cta-horizontal-mechanism {
-                padding: 20px 35px;
-                font-size: 15px;
-                bottom: 25px;
-                max-width: 85vw;
-            }
-
-            .time-digit {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-            }
-
-            .time-labels {
-                gap: 25px;
+            .testimonials-horizontal-layout-grid {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 30px;
             }
 
             .testimonial-quote-horizontal-container {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: row;
+                text-align: left;
+                gap: 20px;
+            }
+
+            .testimonial-user-image {
+                margin: 0;
+            }
+
+            .expert-profile-horizontal-presentation {
+                grid-template-columns: 200px 1fr;
+                gap: 50px;
+                text-align: left;
+            }
+
+            .expert-content-horizontal-section {
+                text-align: left;
+            }
+
+            .expert-profile-image-horizontal {
+                margin: 0;
             }
         }
 
+        @media (min-width: 1024px) {
+            .hero-content-grid-system {
+                gap: 80px;
+            }
+        }
+
+        /* Small mobile optimization */
         @media (max-width: 480px) {
-            .primary-headline-declaration {
-                font-size: 28px;
+            .container-horizontal-boundary {
+                padding: 0 15px;
+            }
+
+            .action-catalyst-button-primary {
+                min-width: 200px;
+                padding: 16px 25px;
+                font-size: 14px;
+                text-transform: none;
+                letter-spacing: 0;
             }
 
             .floating-cta-horizontal-mechanism {
-                padding: 18px 30px;
-                font-size: 14px;
+                padding: 16px 20px;
+                font-size: 13px;
+                bottom: 15px;
+                max-width: 95vw;
             }
 
             .time-digit {
-                width: 45px;
-                height: 45px;
-                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .timer-display-container {
+                gap: 5px;
             }
 
             .time-labels {
-                gap: 20px;
+                gap: 15px;
             }
         }
     </style>
@@ -748,7 +792,7 @@
                             </div>
                         </div>
                         
-                        <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                        <button class="action-catalyst-button-primary" onclick="tta()">Reserve Your Free Seat</button>
                     </div>
                     
                     <div class="hero-visual-presentation-sector">
@@ -787,7 +831,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 40px;">
-                    <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                    <button class="action-catalyst-button-primary" onclick="tta()">Reserve Your Free Seat</button>
                 </div>
             </section>
 
@@ -824,7 +868,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 40px;">
-                    <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                    <button class="action-catalyst-button-primary" onclick="tta()">Reserve Your Free Seat</button>
                 </div>
             </section>
 
@@ -859,7 +903,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 40px;">
-                    <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                    <button class="action-catalyst-button-primary" onclick="tta()">Reserve Your Free Seat</button>
                 </div>
             </section>
 
