@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Free Investment Workshop - Cathie Wood | Systematic Investment Methodology</title>
+    <style>
+        :root {
+            --deep-blue-primary: #1e40af;
+            --light-blue-secondary: #3b82f6;
+            --bright-yellow-accent: #fbbf24;
+            --dark-yellow-emphasis: #f59e0b;
+            --pure-white-background: #ffffff;
+            --light-blue-background: #eff6ff;
+            --dark-text-primary: #1f2937;
+            --medium-text-secondary: #6b7280;
+            --light-border-line: #e5e7eb;
+            --blue-border-accent: #bfdbfe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .page-architectural-framework {
+            font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: var(--pure-white-background);
+            color: var(--dark-text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .container-horizontal-boundary {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero-horizontal-presentation-complex {
+            background: var(--deep-blue-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content-grid-system {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+
+        .hero-textual-content-sector {
+            color: var(--pure-white-background);
+        }
+
+        .primary-headline-declaration {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            color: var(--pure-white-background);
+        }
+
+        .descriptive-content-narrative {
+            font-size: 20px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-weight: 400;
+            color: var(--pure-white-background);
+        }
+
+        .countdown-interactive-module {
+            background: var(--pure-white-background);
+            border: 3px solid var(--bright-yellow-accent);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            animation: countdown-pulse-rhythm 2.5s infinite;
+        }
+
+        @keyframes countdown-pulse-rhythm {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 15px 40px rgba(251, 191, 36, 0.5);
+            }
+        }
+
+        .countdown-label-text {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--deep-blue-primary);
+        }
+
+        .timer-display-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .time-digit {
+            background: var(--deep-blue-primary);
+            color: var(--pure-white-background);
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+        }
+
+        .time-separator {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--dark-yellow-emphasis);
+        }
+
+        .time-labels {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 10px;
+        }
+
+        .time-label {
+            font-size: 12px;
+            color: var(--medium-text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .hero-visual-presentation-sector {
+            position: relative;
+        }
+
+        .workshop-primary-visual-asset {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            border: 4px solid var(--bright-yellow-accent);
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-primary-visual-asset:hover {
+            transform: scale(1.02);
+        }
+
+        .action-catalyst-button-primary {
+            background: var(--bright-yellow-accent);
+            color: var(--dark-text-primary);
+            border: none;
+            padding: 22px 60px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+            animation: button-energy-oscillation 3s infinite;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-catalyst-button-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: left 0.6s ease;
+        }
+
+        .action-catalyst-button-primary:hover::before {
+            left: 100%;
+        }
+
+        @keyframes button-energy-oscillation {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 20px 50px rgba(251, 191, 36, 0.6);
+            }
+        }
+
+        .action-catalyst-button-primary:hover {
+            transform: translateY(-4px) scale(1.08);
+            box-shadow: 0 25px 60px rgba(251, 191, 36, 0.7);
+            animation-play-state: paused;
+            background: var(--dark-yellow-emphasis);
+        }
+
+        .content-horizontal-section-wrapper {
+            background: var(--pure-white-background);
+            margin: 60px 0;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+            border: 3px solid var(--light-border-line);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-horizontal-section-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--bright-yellow-accent);
+        }
+
+        .section-heading-horizontal-primary {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--deep-blue-primary);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-heading-horizontal-primary::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--light-blue-secondary);
+            border-radius: 3px;
+        }
+
+        .benefits-horizontal-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .benefit-card-horizontal-specification {
+            background: var(--light-blue-background);
+            border: 2px solid var(--light-blue-secondary);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card-horizontal-specification::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 100%;
+            background: var(--blue-border-accent);
+            transform: translateX(150px);
+            transition: transform 0.6s ease;
+        }
+
+        .benefit-card-horizontal-specification:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+            border-color: var(--bright-yellow-accent);
+        }
+
+        .benefit-card-horizontal-specification:hover::before {
+            transform: translateX(0);
+        }
+
+        .benefit-title-horizontal-emphasis {
+            font-size: 20px;
+            color: var(--deep-blue-primary);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .benefit-description-horizontal-detail {
+            font-size: 16px;
+            color: var(--dark-text-primary);
+            line-height: 1.7;
+        }
+
+        .participants-horizontal-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+
+        .participant-card-horizontal-presentation {
+            background: var(--pure-white-background);
+            border: 3px solid var(--bright-yellow-accent);
+            border-radius: 25px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .participant-card-horizontal-presentation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--light-blue-background);
+            opacity: 0.5;
+            animation: participant-wave-motion 6s linear infinite;
+        }
+
+        @keyframes participant-wave-motion {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .participant-profile-image-horizontal {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--light-blue-secondary);
+            margin: 0 auto 20px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .participant-name-horizontal-designation {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--deep-blue-primary);
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .participant-role-horizontal-description {
+            font-size: 15px;
+            color: var(--medium-text-secondary);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-content-horizontal-narrative {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--dark-text-primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonials-horizontal-layout-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .testimonial-quote-horizontal-container {
+            background: var(--pure-white-background);
+            border-left: 6px solid var(--bright-yellow-accent);
+            padding: 30px;
+            border-radius: 15px;
+            font-style: italic;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .testimonial-quote-horizontal-container::before {
+            content: '"';
+            font-size: 70px;
+            color: var(--bright-yellow-accent);
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .testimonial-user-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--bright-yellow-accent);
+            flex-shrink: 0;
+        }
+
+        .testimonial-content-wrapper {
+            flex: 1;
+        }
+
+        .quote-attribution-horizontal-signature {
+            font-weight: 600;
+            color: var(--deep-blue-primary);
+            margin-top: 20px;
+            font-style: normal;
+        }
+
+        .expert-profile-horizontal-presentation {
+            background: var(--deep-blue-primary);
+            color: var(--pure-white-background);
+            padding: 60px;
+            border-radius: 30px;
+            margin: 60px 0;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .expert-profile-image-horizontal {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--bright-yellow-accent);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .expert-content-horizontal-section {
+            text-align: left;
+        }
+
+        .expert-name-horizontal-title {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: var(--bright-yellow-accent);
+        }
+
+        .expert-biography-horizontal-content {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--pure-white-background);
+        }
+
+        .risk-disclosure-horizontal-section {
+            background: var(--pure-white-background);
+            border: 4px solid var(--bright-yellow-accent);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .risk-disclosure-horizontal-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 25px,
+                rgba(251, 191, 36, 0.05) 25px,
+                rgba(251, 191, 36, 0.05) 50px
+            );
+        }
+
+        .risk-warning-horizontal-header {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--bright-yellow-accent);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .risk-warning-horizontal-header::before {
+            content: '⚠️';
+            margin-right: 12px;
+            font-size: 28px;
+            animation: warning-flash-motion 2s infinite;
+        }
+
+        @keyframes warning-flash-motion {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.6; }
+        }
+
+        .risk-statement-horizontal-text {
+            font-size: 16px;
+            color: var(--dark-text-primary);
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .legal-footer-horizontal-framework {
+            background: var(--deep-blue-primary);
+            color: var(--pure-white-background);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .legal-section-horizontal-header {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .legal-link-horizontal-element {
+            color: var(--bright-yellow-accent);
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .legal-link-horizontal-element::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--pure-white-background);
+            transition: width 0.3s ease;
+        }
+
+        .legal-link-horizontal-element:hover {
+            color: var(--pure-white-background);
+        }
+
+        .legal-link-horizontal-element:hover::after {
+            width: 100%;
+        }
+
+        .floating-cta-horizontal-mechanism {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bright-yellow-accent);
+            color: var(--dark-text-primary);
+            border: none;
+            padding: 25px 50px;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 800;
+            cursor: pointer;
+            z-index: 99999;
+            box-shadow: 0 20px 50px rgba(251, 191, 36, 0.6);
+            animation: floating-breath-horizontal-motion 3.5s ease-in-out infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 90vw;
+        }
+
+        .floating-cta-horizontal-mechanism::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: floating-shimmer-horizontal-sweep 2.5s infinite;
+        }
+
+        @keyframes floating-shimmer-horizontal-sweep {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes floating-breath-horizontal-motion {
+            0%, 100% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 20px 50px rgba(251, 191, 36, 0.6);
+            }
+            50% {
+                transform: translateX(-50%) scale(1.08);
+                box-shadow: 0 28px 65px rgba(251, 191, 36, 0.8);
+            }
+        }
+
+        .floating-cta-horizontal-mechanism:hover {
+            animation-play-state: paused;
+            transform: translateX(-50%) translateY(-8px) scale(1.12);
+            box-shadow: 0 35px 75px rgba(251, 191, 36, 0.8);
+            background: var(--dark-yellow-emphasis);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content-grid-system {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+
+            .expert-profile-horizontal-presentation {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .benefits-horizontal-grid-layout,
+            .participants-horizontal-showcase-grid,
+            .testimonials-horizontal-layout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container-horizontal-boundary {
+                padding: 0 25px;
+            }
+
+            .hero-horizontal-presentation-complex {
+                padding: 60px 0;
+            }
+
+            .primary-headline-declaration {
+                font-size: 36px;
+            }
+
+            .content-horizontal-section-wrapper {
+                margin: 40px 0;
+                padding: 40px 30px;
+            }
+
+            .section-heading-horizontal-primary {
+                font-size: 28px;
+            }
+
+            .action-catalyst-button-primary {
+                padding: 18px 40px;
+                font-size: 16px;
+            }
+
+            .floating-cta-horizontal-mechanism {
+                padding: 20px 35px;
+                font-size: 15px;
+                bottom: 25px;
+                max-width: 85vw;
+            }
+
+            .time-digit {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .time-labels {
+                gap: 25px;
+            }
+
+            .testimonial-quote-horizontal-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .primary-headline-declaration {
+                font-size: 28px;
+            }
+
+            .floating-cta-horizontal-mechanism {
+                padding: 18px 30px;
+                font-size: 14px;
+            }
+
+            .time-digit {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+            .time-labels {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-architectural-framework">
+        <!-- Hero Workshop Announcement - Horizontal Layout -->
+        <section class="hero-horizontal-presentation-complex">
+            <div class="container-horizontal-boundary">
+                <div class="hero-content-grid-system">
+                    <div class="hero-textual-content-sector">
+                        <h1 class="primary-headline-declaration">Free Online Live Workshop</h1>
+                        <p class="descriptive-content-narrative">
+                            "Learn systematic investment methodology and long-term wealth accumulation principles. Explore historical performance characteristics of different asset classes and risk management approaches. Learn fundamental investment knowledge to help you develop financial planning that suits your personal risk tolerance. (Not investment advice)"
+                        </p>
+                        
+                        <div class="countdown-interactive-module">
+                            <div class="countdown-label-text">Workshop Countdown - 2 Days</div>
+                            <div class="timer-display-container">
+                                <div class="time-digit" id="hours">48</div>
+                                <div class="time-separator">:</div>
+                                <div class="time-digit" id="minutes">00</div>
+                                <div class="time-separator">:</div>
+                                <div class="time-digit" id="seconds">00</div>
+                            </div>
+                            <div class="time-labels">
+                                <div class="time-label">Hours</div>
+                                <div class="time-label">Minutes</div>
+                                <div class="time-label">Seconds</div>
+                            </div>
+                        </div>
+                        
+                        <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                    </div>
+                    
+                    <div class="hero-visual-presentation-sector">
+                        <img src="img/3.png" class="workshop-primary-visual-asset">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-horizontal-boundary">
+            <!-- Workshop Content Overview - Horizontal Layout -->
+            <section class="content-horizontal-section-wrapper">
+                <h2 class="section-heading-horizontal-primary">What You'll Learn in This Online Educational Workshop</h2>
+                
+                <div class="benefits-horizontal-grid-layout">
+                    <div class="benefit-card-horizontal-specification">
+                        <div class="benefit-title-horizontal-emphasis">Investment Strategy & Risk Management</div>
+                        <div class="benefit-description-horizontal-detail">
+                            Explore historical performance characteristics of different asset classes and how to develop suitable investment plans based on your personal financial goals. (Not investment advice)
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card-horizontal-specification">
+                        <div class="benefit-title-horizontal-emphasis">Long-term Wealth Planning Principles</div>
+                        <div class="benefit-description-horizontal-detail">
+                            Learn how to build diversified investment portfolios to weather market volatility and achieve long-term financial goals.
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card-horizontal-specification">
+                        <div class="benefit-title-horizontal-emphasis">Inflation Hedging & Asset Protection</div>
+                        <div class="benefit-description-horizontal-detail">
+                            Understand the risk and return characteristics of different investment tools to help you make smarter financial decisions amid market changes.
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                </div>
+            </section>
+
+            <!-- Enthusiastic Participants - Horizontal Layout -->
+            <section class="content-horizontal-section-wrapper">
+                <h2 class="section-heading-horizontal-primary">Enthusiastic Participants</h2>
+                
+                <div class="participants-horizontal-showcase-grid">
+                    <div class="participant-card-horizontal-presentation">
+                        <img src="img/1.png" class="participant-profile-image-horizontal">
+                        <div class="participant-name-horizontal-designation">Stephanie Renninger</div>
+                        <div class="participant-role-horizontal-description">Pharmaceutical Industry Project Manager (MBA)</div>
+                        <div class="testimonial-content-horizontal-narrative">
+                            <strong>Challenge:</strong> Climate, COVID pandemic, and Ukraine crisis along with related inflation and recession issues have triggered a complete transformation of the global situation.
+                            <br><br>
+                            <strong>Goal:</strong> Plan and implement successful investment strategies within limited time despite lack of expertise.
+                            <br><br>
+                            <strong>Result:</strong> Built successful and sustainable investment portfolio in minimal time.
+                        </div>
+                    </div>
+                    
+                    <div class="participant-card-horizontal-presentation">
+                        <img src="img/2.png" class="participant-profile-image-horizontal">
+                        <div class="participant-name-horizontal-designation">Martin Schrufer</div>
+                        <div class="participant-role-horizontal-description">Financial Services/Health Insurance Expert</div>
+                        <div class="testimonial-content-horizontal-narrative">
+                            <strong>Challenge:</strong> After investing in individual stocks for over a year against the backdrop of early 2022 stock market developments, uncertainty about whether the chosen path was correct.
+                            <br><br>
+                            <strong>Goal:</strong> Higher level of knowledge, high returns, optimized portfolio that satisfies him.
+                            <br><br>
+                            <strong>Result:</strong> Feels great with many recommendations that will help me choose individual titles with good confidence in the future.
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                </div>
+            </section>
+
+            <!-- User Testimonials - Horizontal Layout -->
+            <section class="content-horizontal-section-wrapper">
+                <h2 class="section-heading-horizontal-primary">User Testimonials</h2>
+                
+                <div class="testimonials-horizontal-layout-grid">
+                    <div class="testimonial-quote-horizontal-container">
+                        <img src="img/4.png" class="testimonial-user-image">
+                        <div class="testimonial-content-wrapper">
+                            <p>"A few years ago I inherited some property, relied completely on advisors, and hadn't really delved into the topic. However, due to changing economic conditions, I wanted to better understand my options. It's not rocket science, it's easy to learn, and everyone can decide for themselves how much risk they're willing to take. Now I can finally understand how to evaluate my existing investments and how to invest more profitably."</p>
+                            <div class="quote-attribution-horizontal-signature">— Yvonne, VP of Client Management at an Online Marketing Agency</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-quote-horizontal-container">
+                        <img src="img/5.png" class="testimonial-user-image">
+                        <div class="testimonial-content-wrapper">
+                            <p>"In the past, I never took time to think about investing and had no strategy. Cathie Wood's plan was tailored to my personal situation. Now almost everything is automated. I adjusted my portfolio, set up savings plans, canceled contracts, and everything is as I imagined. From a financial, professional, and personal perspective, it was all worth it."</p>
+                            <div class="quote-attribution-horizontal-signature">— Sylvie, Self-employed Osteopath, Mother of Three Sons</div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-quote-horizontal-container">
+                        <img src="img/6.png" class="testimonial-user-image">
+                        <div class="testimonial-content-wrapper">
+                            <p>"Seven years ago, I chose a managed fund and saved without structure, plan, or expertise. Cathie Wood imparted rich knowledge, introduced various options and strategies, allowing me to accumulate wealth easily, systematically, and passionately. Now my financial situation is established and I can finally make truly informed decisions because I have the necessary background knowledge. I'm very grateful for Cathie Wood's excellent program and the outstanding support she provides."</p>
+                            <div class="quote-attribution-horizontal-signature">— Maren, Freelance Yoga Teacher, Aroma Consultant, Book Author</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <button class="action-catalyst-button-primary" onclick="tta()">Click Here and Reserve Your Free Seat</button>
+                </div>
+            </section>
+
+            <!-- About Cathie Wood - Horizontal Layout -->
+            <section class="expert-profile-horizontal-presentation">
+                <img src="img/3.png" class="expert-profile-image-horizontal">
+                <div class="expert-content-horizontal-section">
+                    <h2 class="expert-name-horizontal-title">About Cathie Wood</h2>
+                    <p class="expert-biography-horizontal-content">
+                        Cathie Wood is a renowned American investment manager, currently serving as founder and CEO of ARK Investment Management. Ms. Wood has extensive experience in investment management, and her founded ARK Investment focuses on researching investment opportunities in innovative technology sectors. The company manages multiple actively managed ETF products, including the ARK Innovation ETF (ARKK), primarily investing in technology-related industries. She has become a focus of industry attention and earned the reputation as the "female Warren Buffett" or "tech stock goddess."
+                    </p>
+                </div>
+            </section>
+
+            <!-- Risk Disclosure -->
+            <section class="risk-disclosure-horizontal-section">
+                <h3 class="risk-warning-horizontal-header">Important Risk Disclosure</h3>
+                <p class="risk-statement-horizontal-text">
+                    • This service only provides general market information and does not constitute any investment advice or recommendations.
+                </p>
+                <p class="risk-statement-horizontal-text">
+                    • Financial markets involve risks, and you may lose part or all of your investment principal.
+                </p>
+                <p class="risk-statement-horizontal-text">
+                    • All displayed examples are historical data analysis and do not constitute any guarantee of future returns.
+                </p>
+                <p class="risk-statement-horizontal-text">
+                    • Investors should make prudent decisions based on their own risk tolerance.
+                </p>
+            </section>
+        </div>
+
+        <!-- Legal Footer -->
+        <footer class="legal-footer-horizontal-framework">
+            <div class="container-horizontal-boundary">
+                <h4 class="legal-section-horizontal-header">Legal Information</h4>
+                <a href="privacy.html" class="legal-link-horizontal-element">Privacy Policy</a>
+                <a href="terms.html" class="legal-link-horizontal-element">Terms of Service</a>
+            </div>
+        </footer>
+
+        <!-- Floating CTA Button -->
+        <button class="floating-cta-horizontal-mechanism" onclick="tta()">
+            Join Now, Reserve Your Free Seat
+        </button>
+    </div>
+
+    <script>
+        function tta() {
+            window.location.href = "https://wa.me/";
+        }
+
+        // 2 days countdown timer
+        let totalSeconds = 2 * 24 * 60 * 60; // 2 days in seconds
+
+        function updateCountdown() {
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+            if (totalSeconds > 0) {
+                totalSeconds--;
+            } else {
+                totalSeconds = 2 * 24 * 60 * 60; // Reset to 2 days
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
